@@ -49,7 +49,7 @@ if (ref $wanted_ids eq 'ARRAY') {
     my $file_for = get_file_ids();
     foreach my $id (@$wanted_ids) {
         if (defined $file_for->{$id}) {
-            print $file_for->{$id};
+            print "$ENV{PWD}/".$file_for->{$id};
         } else {
             print $id;
         }
